@@ -5,8 +5,8 @@ alias cl='clear'
 alias p='pwd'
 
 # git settings
-source /usr/local/git/contrib/completion/git-prompt.sh
-source /usr/local/git/contrib/completion/git-completion.bash
+source ~/.bash/git-prompt.sh #/usr/local/git/contrib/completion/git-prompt.sh
+source ~/.bash/git-cmopletion.sh #/usr/local/git/contrib/completion/git-completion.bash
 GIT_PS1_SHOWDIRTYSTATE=true
 CDIR=`pwd | awk -F / '{print $NF}'`
 #export PS1='[@$USER~$CDIR]$(__git_ps1)$ '
