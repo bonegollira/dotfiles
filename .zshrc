@@ -4,6 +4,8 @@ export LSCOLORS=gxfxxxxxcxxxxxxxxxgxgx
 export LS_COLORS="di=01;36:ln=01;35:ex=01;32"
 export EDITOR=vim
 
+fpath=(~/.zsh/completion $fpath)
+
 alias g="git"
 alias p="pwd"
 alias ll="ls -al"
@@ -17,6 +19,8 @@ autoload -Uz vcs_info
 precmd () { vcs_info }
 # 履歴検索
 autoload history-search-end
+# gitの補完
+autoload -U compinit; compinit -u
 
 zle -N history-beginning-search-backward-end history-search-end
 zle -N history-beginning-search-forward-end history-search-end
