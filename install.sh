@@ -39,5 +39,5 @@
 
 # install neobundle {{{
   ghq get https://github.com/Shougo/neobundle.vim
-  ln -s `ghq root`/`ghq list neobundle.vim` ~/.vim/bundle
+  ln -s `ghq list -p neobundle.vim` ~/.vim/bundle
 # }}}

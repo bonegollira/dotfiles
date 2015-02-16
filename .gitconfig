@@ -2,4 +2,4 @@
   insteadOf = git@github.com:
   insteadOf = git://github.com/
 [ghq]
-  root = /Users/daisuke/.github
+  root = ~/.github
