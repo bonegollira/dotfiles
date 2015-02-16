@@ -1,0 +1,11 @@
+{
+  "Keymap": {
+    "C-j": "peco.SelectDown",
+    "C-k": "peco.SelectUp"
+  },
+  "Style": {
+    "Query": ["green"],
+    "Selected": ["white", "on_blue", "underline"],
+    "Matched": ["yellow", "bold"]
+  }
+}
