@@ -1,8 +1,9 @@
-#!/bin/sh
+#!/bin/bash
 
 # dotfile {{{
   PWD=`pwd`
   DOTS=".gitconfig .zshrc .zsh .vimrc .vim .peco"
+  mkdir -p .vim/bundle
   echo "Link dotfiles: $DOTS"
   for dotfile in $DOTS
   do
@@ -13,9 +14,30 @@
 # install homebrew {{{
   unamestr=`uname`
   if [[ $unamestr == 'Darwin' ]]; then
-    if [ hash brew 2>/dev/null ]; then
+    if ! type brew >/dev/null 2>&1; then
       echo "homebrew: installing..."
       ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
     fi
   fi
+# }}}
+
+# install ghq {{{
+  if ! type ghq >/dev/null 2>&1; then
+    echo "ghq: installing..."
+    brew tap motemen/ghq
+    brew install ghq
+  fi
+# }}}
+
+# install peco {{{
+  if ! type peco >/dev/null 2>&1; then
+    echo "peco: installing..."
+    brew tap peco/peco
+    brew install peco
+  fi
+# }}}
+
+# install neobundle {{{
+  ghq get https://github.com/Shougo/neobundle.vim
+  ln -s `ghq root`/`ghq list neobundle.vim` .vim/bundle
 # }}}

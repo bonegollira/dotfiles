@@ -61,27 +61,26 @@ autocmd BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "norm
   " Note: Skip initialization for vim-tiny or vim-small.
   if !1 | finish | endif
 
-  if has('vim_starting')
+  if has("vim_starting")
     " Required:
     set runtimepath+=~/.vim/bundle/neobundle.vim/
   endif
 
   " Required:
-  call neobundle#begin(expand('~/.vim/bundle/'))
+  call neobundle#begin(expand("~/.vim/bundle/"))
 
   " Let NeoBundle manage NeoBundle
   " Required:
-  NeoBundleFetch 'Shougo/neobundle.vim'
+  NeoBundleFetch "Shougo/neobundle.vim"
   NeoBundleLazy "jelera/vim-javascript-syntax", {"autoload":{"filetype":["javascript"]}}
   NeoBundle "Shougo/neocomplete"
-  NeoBundle 'Shougo/neosnippet'
-  NeoBundle 'Shougo/neosnippet-snippets'
-  " https://github.com/editorconfig/editorconfig-vim
-  NeoBundle "~/.vim/editorconfig-vim"
+  NeoBundle "Shougo/neosnippet"
+  NeoBundle "Shougo/neosnippet-snippets"
+  NeoBundle "editorconfig/editorconfig-vim"
 
   " My Bundles here:
   " Refer to |:NeoBundle-examples|.
-  " Note: You don't set neobundle setting in .gvimrc!
+  " Note: You don"t set neobundle setting in .gvimrc!
   call neobundle#end()
 
   " Required:
