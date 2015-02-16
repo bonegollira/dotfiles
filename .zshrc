@@ -4,9 +4,9 @@ export LSCOLORS=gxfxxxxxcxxxxxxxxxgxgx
 export LS_COLORS="di=01;36:ln=01;35:ex=01;32"
 export EDITOR=vim
 
-alias g = "git"
-alias p = "pwd"
-alias ll = "ls -al"
+alias g="git"
+alias p="pwd"
+alias ll="ls -al"
 
 # 補完
 autoload -Uz compinit; compinit
