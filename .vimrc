@@ -73,7 +73,7 @@ autocmd BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "norm
   " Required:
   NeoBundleFetch "Shougo/neobundle.vim"
   NeoBundleLazy "jelera/vim-javascript-syntax", {"autoload":{"filetype":["javascript"]}}
-  NeoBundle "Shougo/neocomplete"
+  "NeoBundle "Shougo/neocomplete"
   NeoBundle "Shougo/neosnippet"
   NeoBundle "Shougo/neosnippet-snippets"
   NeoBundle "editorconfig/editorconfig-vim"
