@@ -109,6 +109,6 @@ autocmd BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "norm
   imap <C-k> <Plug>(neosnippet_expand_or_jump)
   smap <C-k> <Plug>(neosnippet_expand_or_jump)
   if has("conceal")
-    set conceallevel=2 concealcursor=i
+    set conceallevel=1 concealcursor=i
   endif
 " }}}
