@@ -30,6 +30,7 @@ bindkey "^P" history-beginning-search-backward-end
 bindkey "^N" history-beginning-search-forward-end 
 bindkey "^H" peco_select_history
 bindkey "^G" peco-src
+bindkey "^O" peco-dir-open-app
 
 zstyle ":vcs_info:*" enable git svn hg bzr
 zstyle ":vcs_info:git:*" check-for-changes true

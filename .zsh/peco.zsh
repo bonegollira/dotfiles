@@ -21,3 +21,13 @@ function peco-src () {
   zle clear-screen
 }
 zle -N peco-src
+
+function peco-dir-open-app () {
+  local file=$(find . -type f | grep -v "\/\." | grep -v "node_modules" | grep -v "bower_components" | peco --query "$LBUFFER")
+  if [ -n "$file" ]; then
+    BUFFER="vim ${file}"
+    zle accept-line
+  fi
+  zle clear-screen
+}
+zle -N peco-dir-open-app
