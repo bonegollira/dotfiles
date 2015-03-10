@@ -1,4 +1,5 @@
 
+export PATH=$HOME/.nodebrew/current/bin:$PATH
 export LANG=ja_JP.UTF-8
 export LSCOLORS=gxfxxxxxcxxxxxxxxxgxgx
 export LS_COLORS="di=01;36:ln=01;35:ex=01;32"
@@ -31,6 +32,7 @@ bindkey "^N" history-beginning-search-forward-end
 bindkey "^H" peco_select_history
 bindkey "^G" peco-src
 bindkey "^O" peco-dir-open-app
+bindkey "^m" do_enter
 
 zstyle ":vcs_info:*" enable git svn hg bzr
 zstyle ":vcs_info:git:*" check-for-changes true
@@ -69,4 +71,5 @@ setopt nobeep
 # プロンプトに変数を展開できる
 setopt prompt_subst
 
+. ~/.zsh/git.zsh
 . ~/.zsh/peco.zsh
