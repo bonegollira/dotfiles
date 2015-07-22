@@ -14,6 +14,7 @@ function do_enter() {
     git status -sb
   fi
   zle reset-prompt
+  cd .
   return 0
 }
 zle -N do_enter

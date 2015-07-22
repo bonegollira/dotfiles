@@ -10,6 +10,7 @@ fpath=(~/.zsh/completion $fpath)
 alias g="git"
 alias p="pwd"
 alias ll="ls -al"
+alias n="npm run"
 
 # 補完
 autoload -Uz compinit; compinit

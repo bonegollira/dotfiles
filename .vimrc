@@ -4,6 +4,7 @@ set fileencodings=utf-8,euc-jp,iso-2022-jp,cp932
 set termencoding=utf-8
 set backspace=indent,eol,start
 set tabstop=2
+set softtabstop=2
 set expandtab
 set whichwrap=b,s,h,l,<,>,[,]
 set shiftwidth=2
@@ -19,6 +20,7 @@ set wrap
 set nocompatible
 set nolinebreak
 set wildmenu
+set autoindent
 
 nmap <C-l> 5l
 nmap <C-k> 5k
@@ -62,6 +64,7 @@ autocmd BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "norm
 " NeoBundle {{{
   " Note: Skip initialization for vim-tiny or vim-small.
   if !1 | finish | endif
+  filetype off
 
   if has("vim_starting")
     " Required:
@@ -86,7 +89,7 @@ autocmd BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "norm
   call neobundle#end()
 
   " Required:
-  filetype plugin indent on
+  filetype plugin on
 
   " If there are uninstalled bundles found on startup,
   " this will conveniently prompt you to install them.

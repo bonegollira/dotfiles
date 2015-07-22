@@ -1,11 +1,14 @@
+[include]
+  path = .gitconfig.local
 [url "https://github.com/"]
-  insteadOf = git@github.com:
-  insteadOf = git://github.com/
+  insteadof = git@github.com:
+  insteadof = git://github.com/
 [ghq]
   root = ~/.github
 [fetch]
   prune = true 
 [alias]
+  co = "!f () { git checkout $1; };f"
   release = "!f () { git tag $1; git push origin $1; };f"
   cancel = "!f () { git tag -d $1; git push origin :$1; };f"
-  refresh = "!f () { git checkout $1; git branch --merged | egrep -v '\\*|develop|master' | xargs git branch -d; };f"
+  refresh = "!f () { git checkout $1; git pull origin $1; git branch --merged | egrep -v '\\*|develop|master' | xargs git branch -d; };f"
