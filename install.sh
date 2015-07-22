@@ -37,6 +37,14 @@
   fi
 # }}}
 
+# install hub {{{
+  if ! type hub >/dev/null 2>&1; then
+    echo "hub: installing..."
+    brew tap github/hub
+    brew install hub
+  fi
+# }}}
+
 # install neobundle {{{
   ghq get https://github.com/Shougo/neobundle.vim
   ln -s `ghq list -p neobundle.vim` ~/.vim/bundle

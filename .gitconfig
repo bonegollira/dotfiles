@@ -12,3 +12,5 @@
   release = "!f () { git tag $1; git push origin $1; };f"
   cancel = "!f () { git tag -d $1; git push origin :$1; };f"
   refresh = "!f () { git checkout $1; git pull origin $1; git branch --merged | egrep -v '\\*|develop|master' | xargs git branch -d; };f"
+  pr = "!f () { hub pull-request; };f"
+  web = "!f() { hub browse; };f"
