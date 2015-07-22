@@ -1,7 +1,6 @@
 #!/bin/bash
 
 # dotfile {{{
-  A="A"
   PWD=`pwd`
   DOTS=".gitconfig .zshrc .zsh .vimrc .vim .peco"
   mkdir -p .vim/bundle
