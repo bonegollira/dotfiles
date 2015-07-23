@@ -14,3 +14,4 @@
   refresh = "!f () { git checkout $1; git pull origin $1; git branch --merged | egrep -v '\\*|develop|master' | xargs git branch -d; };f"
   pr = "!f () { hub pull-request; };f"
   web = "!f() { hub browse; };f"
+  see = "!f() { hub browse -- pulls; };f"
