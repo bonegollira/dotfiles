@@ -15,3 +15,5 @@
   pr = "!f () { hub pull-request; };f"
   web = "!f() { hub browse; };f"
   see = "!f() { hub browse -- pulls; };f"
+  ver = "!f() { cat package.json | jq .version -r | xargs git tag; cat package.json | jq .version -r | xargs git push origin; };f"
+  unver = "!f() { cat package.json | jq .version -r | xargs git tag -d; cat package.json | jq .version -r | sed -e 's/^/:/' | xargs git push origin; };f"

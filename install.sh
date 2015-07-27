@@ -45,6 +45,14 @@
   fi
 # }}}
 
+# install jq {{{
+  if ! type jq >/dev/null 2>&1; then
+    echo "jq: installing..."
+    brew tap stedolan/jq
+    brew install jq
+  fi
+# }}}
+
 # install neobundle {{{
   ghq get https://github.com/Shougo/neobundle.vim
   ln -s `ghq list -p neobundle.vim` ~/.vim/bundle
