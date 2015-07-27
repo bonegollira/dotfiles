@@ -15,3 +15,4 @@
   pr = "!f () { hub pull-request; };f"
   web = "!f() { hub browse; };f"
   see = "!f() { hub browse -- pulls; };f"
+  issue = "!f() { hub browse -- issues; };f"
