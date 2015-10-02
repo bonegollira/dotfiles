@@ -21,6 +21,17 @@
   fi
 # }}}
 
+# install nodebrew {{{
+  if ! type nodebrew >/dev/null 2>&1; then
+    echo "nodebrew: installing..."
+    curl -L git.io/nodebrew | perl - setup
+  fi
+# }}}
+
+# install babel, babel-eslint, eslint {{{
+  npm install -g babel babel-eslint eslint
+# }}}
+
 # install ghq {{{
   if ! type ghq >/dev/null 2>&1; then
     echo "ghq: installing..."

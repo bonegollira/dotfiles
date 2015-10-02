@@ -11,6 +11,7 @@ alias g="git"
 alias p="pwd"
 alias ll="ls -al"
 alias n="npm run"
+alias v="cat package.json | jq .version"
 
 # 補完
 autoload -Uz compinit; compinit

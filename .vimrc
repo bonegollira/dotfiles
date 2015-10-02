@@ -82,6 +82,8 @@ autocmd BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "norm
   NeoBundle "Shougo/neosnippet"
   NeoBundle "Shougo/neosnippet-snippets"
   NeoBundle "editorconfig/editorconfig-vim"
+  NeoBundle "tpope/vim-pathogen"
+  NeoBundle "scrooloose/syntastic"
 
   " My Bundles here:
   " Refer to |:NeoBundle-examples|.
@@ -116,4 +118,13 @@ autocmd BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "norm
   if has("conceal")
     set conceallevel=0 concealcursor=i
   endif
+" }}}
+
+" vim-pathogen {{{
+  execute pathogen#infect()
+" }}}
+
+" syntastic {{{
+  let g:syntastic_always_populate_loc_list = 1
+  let g:syntastic_javascript_checkers = ['eslint']
 " }}}
