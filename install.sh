@@ -28,8 +28,9 @@
   fi
 # }}}
 
-# install babel, babel-eslint, eslint {{{
-  npm install -g babel babel-eslint eslint
+# install babel, babel-eslint, eslint pure-prompt {{{
+  npm install -g babel babel-eslint eslint pure-prompt
+  ln -s ~/.nodebrew/current/lib/node_modules/pure-prompt/*.zsh .zsh/
 # }}}
 
 # install ghq {{{

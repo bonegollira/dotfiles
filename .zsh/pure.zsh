@@ -1,0 +1,1 @@
+/Users/daikobay/.nodebrew/current/lib/node_modules/pure-prompt/pure.zsh

@@ -30,6 +30,15 @@ nmap <C-x> 5x
 nmap <C-d> 5dd
 nmap <Esc><Esc> :nohlsearch<CR><Esc>
 
+" import aaa from 'bbb'; => const aaa = require('bbb');
+"nmap <C-i> :%s/import \(.*\) from '\(.*\)';/const \1 = require('\2');/<CR>:nohlsearch<CR>
+" const aaa = require('bbb'); => import aaa from 'bbb';
+nmap <C-w> :%s/const \(.*\) = require('\(.*\)');/import \1 from '\2';/<CR>:nohlsearch<CR>
+" export default aaa; => module.exports = aaa;
+"nmap <C-b> :%s/export default \(.*\);/module.exports = \1;/<CR>:nohlsearch<CR>
+" void 0; => undefined
+nmap <C-i> :%s/void 0/undefined/<CR>:nohlsearch<CR>
+
 vmap # :s/^/# /<CR>:nohlsearch<CR>
 vmap / :s/^/\/\/ /<CR>:nohlsearch<CR>
 vmap > :s/^/> /<CR>:nohlsearch<CR>
@@ -41,9 +50,9 @@ vmap - :s/^/-- /<CR>:nohlsearch<CR>
 vmap :c :s/^\/\/ \\|^-- \\|^> \\|^[#"%!;] //<CR>:nohlsearch<CR>
 vmap * :s/^\(.*\)$/\/\* \1 \*\//<CR>:nohlsearch<CR>
 vmap ( :s/^\(.*\)$/\(\* \1 \*\)/<CR>:nohlsearch<CR>
-vmap < :s/^\(.*\)$/<!-- \1 -->/<CR>:nohlsearch<CR>
-vmap > :s/^\(.*\)$/<li><pre>\1<\/pre><\/li>/<CR>:nohlsearch<CR>
-vmap :d :s/^\([/(]\*\\|<!--\) \(.*\) \(\*[/)]\\|-->\)$/\2/<CR>:nohlsearch<CR>
+vmap < :s/^\(.*\)$/<!-- \1 -->/<cr>:nohlsearch<cr>
+vmap > :s/^\(.*\)$/<li><pre>\1<\/pre><\/li>/<cr>:nohlsearch<cr>
+vmap :d :s/^\([/(]\*\\|<!--\) \(.*\) \(\*[/)]\\|-->\)$/\2/<cr>:nohlsearch<cr>
 
 vnoremap <Tab> 0>>
 vnoremap <S-Tab> 0<<

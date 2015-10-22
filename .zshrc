@@ -50,7 +50,8 @@ precmd () {
   [[ -n "$vcs_info_msg_0_" ]] && psvar[1]="$vcs_info_msg_0_"
 }
 
-PROMPT="%{$fg[cyan]%}[%~]%{$reset_color%}%1(v|%F{green}%1v%f|) "
+#PROMPT="%{$fg[cyan]%}[%~]%{$reset_color%}%1(v|%F{green}%1v%f|) "
+PROMPT="%{$fg[cyan]%}> %{$reset_color%}%1(v|%F{green}%1v%f|) "
 #RPROMPT="%{$fg[cyan]%}%n@%m %{$reset_color%}"
 
 # ミスタイプのときのコマンド提示
@@ -75,3 +76,7 @@ setopt prompt_subst
 
 . ~/.zsh/git.zsh
 . ~/.zsh/peco.zsh
+. ~/.zsh/async.zsh
+. ~/.zsh/pure.zsh
+autoload -U promptinit && promptinit
+prompt pure
