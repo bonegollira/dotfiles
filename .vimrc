@@ -58,7 +58,8 @@ vnoremap <Tab> 0>>
 vnoremap <S-Tab> 0<<
 
 syntax on
-colorscheme zenburn
+"colorscheme zenburn
+colorscheme Tomorrow-Night-Eighties
 
 autocmd BufRead *.html :set filetype=php
 autocmd BufRead *.stylus :set filetype=css
