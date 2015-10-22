@@ -65,6 +65,12 @@
   fi
 # }}}
 
+# install zsh-syntax-highlighting {{{
+  echo "zsh-syntax-highlighting: installing..."
+  ghq get git://github.com/zsh-users/zsh-syntax-highlighting.git
+  ln -s `ghq list -p zsh-syntax-highlighting` ~/.zsh/
+# }}}
+
 # install neobundle {{{
   ghq get https://github.com/Shougo/neobundle.vim
   ln -s `ghq list -p neobundle.vim` ~/.vim/bundle
