@@ -1,5 +1,5 @@
 
-export PATH=$HOME/.nodebrew/current/bin:$PATH
+export PATH=$HOME/.nodebrew/current/bin:/Applications/calibre.app/Contents/MacOS:$PATH
 export LANG=ja_JP.UTF-8
 export LSCOLORS=gxfxxxxxcxxxxxxxxxgxgx
 export LS_COLORS="di=01;36:ln=01;35:ex=01;32"
@@ -81,3 +81,4 @@ setopt prompt_subst
 autoload -U promptinit && promptinit
 prompt pure
 . ~/.zsh/zsh-syntax-highlighting.zsh
+. ~/.local.zsh

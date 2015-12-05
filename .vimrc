@@ -53,13 +53,14 @@ vmap ( :s/^\(.*\)$/\(\* \1 \*\)/<CR>:nohlsearch<CR>
 vmap < :s/^\(.*\)$/<!-- \1 -->/<cr>:nohlsearch<cr>
 vmap > :s/^\(.*\)$/<li><pre>\1<\/pre><\/li>/<cr>:nohlsearch<cr>
 vmap :d :s/^\([/(]\*\\|<!--\) \(.*\) \(\*[/)]\\|-->\)$/\2/<cr>:nohlsearch<cr>
+vmap :u :s/^/'use strict';/<CR>:nohlsearch<CR>
 
 vnoremap <Tab> 0>>
 vnoremap <S-Tab> 0<<
 
 syntax on
-"colorscheme zenburn
-colorscheme Tomorrow-Night-Eighties
+colorscheme zenburn
+"colorscheme Tomorrow-Night-Eighties
 
 autocmd BufRead *.html :set filetype=php
 autocmd BufRead *.stylus :set filetype=css
