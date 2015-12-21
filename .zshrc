@@ -35,6 +35,7 @@ bindkey "^H" peco_select_history
 bindkey "^G" peco-src
 bindkey "^O" peco-dir-open-app
 bindkey "^m" do_enter
+bindkey "^N" peco-gic
 
 zstyle ":vcs_info:*" enable git svn hg bzr
 zstyle ":vcs_info:git:*" check-for-changes true

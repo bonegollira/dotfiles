@@ -22,6 +22,16 @@ function peco-src () {
 }
 zle -N peco-src
 
+function peco-gic () {
+  local selected_issue_number=$(gic list | peco | sed -e 's/^  #\([0-9]*\).*$/\1/g')
+  if [ -n "$selected_issue_number" ]; then
+    BUFFER="gic show ${selected_issue_number}"
+    zle accept-line
+  fi
+  zle clear-screen
+}
+zle -N peco-gic
+
 function peco-dir-open-app () {
   local file=$(find . -type f | grep -v "\/\." | grep -v "node_modules" | grep -v "bower_components" | peco --query "$LBUFFER")
   if [ -n "$file" ]; then
