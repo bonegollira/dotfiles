@@ -1,0 +1,1 @@
+/Users/daikobay/.github/github.com/zsh-users/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
