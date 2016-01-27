@@ -1,4 +1,7 @@
 
+export GOROOT=/usr/local/opt/go/libexec
+export GOPATH=$HOME
+export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 export PATH=$HOME/.nodebrew/current/bin:/Applications/calibre.app/Contents/MacOS:$PATH
 export LANG=ja_JP.UTF-8
 export LSCOLORS=gxfxxxxxcxxxxxxxxxgxgx
