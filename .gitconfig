@@ -4,7 +4,7 @@
   insteadof = git@github.com:
   insteadof = git://github.com/
 [ghq]
-  root = ~/.github
+  root = ~/src
 [fetch]
   prune = true 
 [alias]
