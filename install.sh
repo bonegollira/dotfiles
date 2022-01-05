@@ -31,7 +31,7 @@
 # }}}
 
 # install babel, babel-eslint, eslint pure-prompt {{{
-  npm install -g babel babel-eslint eslint pure-prompt
+  npm install -g pure-prompt
   ln -s ~/.nodebrew/current/lib/node_modules/pure-prompt/*.zsh .zsh/
 # }}}
 
@@ -56,14 +56,6 @@
     echo "hub: installing..."
     brew tap github/hub
     brew install hub
-  fi
-# }}}
-
-# install jq {{{
-  if ! type jq >/dev/null 2>&1; then
-    echo "jq: installing..."
-    brew tap stedolan/jq
-    brew install jq
   fi
 # }}}
 
