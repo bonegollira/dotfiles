@@ -25,6 +25,8 @@
   if ! type nodebrew >/dev/null 2>&1; then
     echo "nodebrew: installing..."
     curl -L git.io/nodebrew | perl - setup
+    nodebrew install-binary latest
+    nodebrew use latest
   fi
 # }}}
 
