@@ -84,5 +84,5 @@ setopt prompt_subst
 . ~/.zsh/pure.zsh
 autoload -U promptinit && promptinit
 prompt pure
-. ~/.zsh/zsh-syntax-highlighting.zsh
+. ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 . ~/.local.zsh
